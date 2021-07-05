@@ -1,0 +1,198 @@
+package CodeForCause.QPractise.Assignment;
+
+public class PatternQ7 {
+public static void pattern(int n){
+int id =1,nst=1,nsp=n-1;
+while(id<=n){
+int csp=1;
+while (csp<=nsp){
+System.out.print(" ");
+csp++;
+}
+int cst=1;
+while (cst<=nst){
+System.out.print("* ");
+cst++;
+}
+System.out.println();
+nst++;
+nsp--;
+id++;
+
+    }
+}
+public static void pattern7a(int n){
+    int id=1,nst=1;
+    while (id<=n){
+        int cst=1;
+        while (cst<=nst){
+            System.out.print("* ");
+            cst++;
+        }
+        System.out.println();
+        id++;
+        nst++;
+    }
+}
+public static void pattern7b(int n){
+    int id=1,nst=1;
+    while (id<=n){
+        int cst=1;
+        while (cst<=nst){
+            System.out.print(cst+" ");
+            cst++;
+        }
+        System.out.println();
+        id++;
+        nst++;
+    }
+}
+public static void pattern4(int n){
+    int id=1,nst=1,nsp=n-1;
+    while (id<=n){
+        int csp=1;
+        while (csp<=nsp){
+            System.out.print("  ");
+            csp++;
+        }
+        int cst=1;
+        while (cst<=nst){
+            System.out.print("* ");
+            cst=cst+1;
+        }
+        System.out.println();
+        nsp--;
+        nst=nst+2;
+        id++;
+    }
+}
+ public static void pattern7c(int n){
+    int id=1,nst=1,nsp=n-1;
+    while (id<=n){
+        int csp=1;
+        while (csp<=nsp){
+            System.out.print("  ");
+            csp++;
+        }
+        int cst=1;
+        while (cst<=nst){
+            if(cst<=(nst+1)/2){
+                System.out.print(cst+" ");
+            }else{
+                System.out.print(nst-cst+1+" ");
+            }
+            cst++;
+
+
+        }
+        System.out.println();
+        id++;
+        nst=nst+2;
+        nsp=nsp-1;
+    }
+    
+ }
+ public static void pattern6(int n){
+    int id=1,nst=1,nsp=n-1;
+    while (id<=2*n-1){
+        int csp=1;
+        while (csp<=nsp){
+            System.out.print("  ");
+            csp++;
+        }
+        int cst=1;
+        while (cst<=nst){
+            System.out.print(cst+" ");
+
+            cst++;
+        }
+        System.out.println();
+        if(id<n){
+            nst=nst+2;
+            nsp=nsp-1;
+        }else {
+            nst=nst-2;
+            nsp=nsp+1;
+        }
+    }
+ }
+public static void pattern7(int n){
+    int id=1,nst=1,nsp=n-1;
+    while (id<=n){
+        int csp=1;
+        while (csp<=nsp){
+            System.out.print("  ");
+            csp++;
+        }
+        int cst=1;
+
+        while (cst<=nst){
+            if(cst<=nst){
+
+                System.out.print((nst+1)/2+" ");
+            }else{
+                System.out.print(2*nst-cst-1+" ");
+            }
+            cst++;
+
+
+
+        }
+        System.out.println();
+        id++;
+        nst=nst+2;
+        nsp=nsp-1;
+    }
+
+}
+public static void pattern7d(int n) {
+    int id = 1, nst = 1, nsp = n - 1;
+    while (id <= n) {
+        int csp = 1;
+        while (csp <= nsp) {
+            System.out.print("  ");
+            csp++;
+        }
+
+
+        int cst = 1;
+        while (cst <= nst / 2) {
+            int temp = cst - 1 + id;
+            System.out.print(" " + temp);
+            cst++;
+
+        }
+        while (cst > 0) {
+            int temp = cst - 1 + id;
+            System.out.print(" " + temp);
+            cst--;
+        }
+        System.out.println();
+        id++;
+        nsp--;
+        nst += 2;
+    }
+}
+public static void GCD(){
+    int a=6;
+    int b=9;
+    for (int i = Math.min(a,b); i >=1 ; i--) {
+        if(a%i==0 && b%i==0)
+        System.out.println(i);
+
+    }
+}
+
+public static void main(String[] args) {
+    int n=5;
+  //  pattern(5);
+    pattern7a(5);
+   pattern7b(5);
+  // pattern4(5);
+    pattern7c(5);
+   // pattern6(5);
+    //pattern7(5);
+    pattern7d(5);
+    GCD();
+}
+}

@@ -1,0 +1,48 @@
+package CodeForCause.QPractise.Assignment;
+
+import java.util.Scanner;
+
+public class Assignment1 {
+
+
+
+    public static float simpleInterest(){
+        int a=234;
+        int r=2;
+        int t=4;
+        float si;
+        si=(a*r*t)/100;
+        System.out.println(si);
+        return 0;
+
+    }
+
+    public static void main(String[] args) {
+                Scanner sc=new Scanner(System.in);
+                System.out.println("Enter the credid cfc campus leader");
+                int credit=sc.nextInt();
+               if(credit>= 7500){
+                    System.out.println("Tera leader");
+                }else if(6000 <=credit && credit<7500){
+                    System.out.println("Gega leader");
+                }else if(4500<=credit && credit<6000){
+                    System.out.println("Mega leader");
+                }else if(credit<4500){
+                    System.out.println("Rising star");
+
+                }else{
+                    System.out.println();
+                }
+                simpleInterest();
+                System.out.println(simpleInterest());
+                Assignmentd1 obj1=new Assignmentd1();
+                obj1.evenJumpByOdd(10);
+               obj1.countTheNum();
+        obj1.reverseTheNum();
+
+            }
+
+
+
+    }
+
